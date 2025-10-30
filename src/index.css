@@ -1,0 +1,119 @@
+body {
+    background-color: whitesmoke;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokedex-body {
+    position: relative;
+}
+
+#pokedex-left-screen {
+    width: 280px;
+    height: 280px;
+    background-color: #231f20;
+    position: absolute;
+    top: 175px;
+    left: 68px;
+    border-radius: 3px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+#blue-circle {
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: radial-gradient(farthest-corner at 20px 20px, #ffffff 10%, #34e0fb 50%);
+    border: 2px solid black;
+}
+
+#circle-lights {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 35px;
+    left: 130px;
+    display: flex;
+    gap: 1.1em;
+}
+
+.small-led {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-image: radial-gradient(farthest-corner at 2px 2px, #ffffff 10%, #ed1c24 50%);
+    border: 1.5px solid black;
+}
+
+#circle-lights div:nth-child(2) {
+    background-image: radial-gradient(farthest-corner at 2px 2px, #ffffff 10%, #fff200 50%);
+}
+
+#circle-lights div:nth-child(3) {
+    background-image: radial-gradient(farthest-corner at 2px 2px, #ffffff 10%, #26b700 50%);
+}
+
+#scan-btn {
+    position: absolute;
+    top: 550px;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #231f20;
+    box-shadow: 2px 2px 2px black;
+}
+
+#update-text-container {
+    position: absolute;
+    top: 620px;
+    left: 120px;
+    width: 140px;
+    height: 90px;
+    background-color: #26b700;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    overflow: auto;
+    color: whitesmoke;
+    font-size: 1.2em;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+}
+
+.pokemon-img {
+    width: 300px;
+    height: 300px;
+}
+
+/* RIGHT SIDE */
+
+#pokedex-right-screen {
+    width: 400px;
+    height: 200px;
+    background-color: #231f20;
+    position: absolute;
+    top: 150px;
+    left: 510px;
+    border-radius: 3px;
+}

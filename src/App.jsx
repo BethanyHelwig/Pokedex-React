@@ -1,4 +1,5 @@
 import React from 'react'
+import { clsx } from 'clsx'
 
 function App() {
   
@@ -6,6 +7,23 @@ function App() {
     const [ updateText, setUpdateText ] = React.useState("")
     const [ currentPokemon, setCurrentPokemon ] = React.useState()
     const [ loading, setLoading ] = React.useState(false)
+    const [ region, setRegion ] = React.useState("Kanto")
+
+    const regions = ["Kanto", "Johto", "Hoenn", "Sinnoh", "Unova", "Kalos", "Alola", "Galar", "Hisui", "Paldea"]
+
+    const regionButtons = regions.map((regionEl) => {
+            const style = clsx({
+                "selected-region" : region === regionEl
+            })
+
+            return <button 
+                        className={style} 
+                        id={regionEl}
+                        onClick={() => selectRegion(regionEl)}
+                    >
+                        {regionEl}
+                   </button>
+        })
 
     function getData(){
         setLoading(true)
@@ -21,6 +39,10 @@ function App() {
             })
             .finally(setLoading(false))
         }, 1000)
+    }
+
+    function selectRegion(id){
+        setRegion(id)
     }
 
     return (
@@ -43,6 +65,9 @@ function App() {
                 </div>
 
                 <div id="pokedex-right-screen"></div>
+                <div id="region-btns">
+                    {regionButtons}
+                </div>
             </div>
         </>
     )

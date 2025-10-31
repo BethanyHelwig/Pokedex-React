@@ -1,6 +1,7 @@
 body {
     background-color: whitesmoke;
-    font-family: "Jersey 10", sans-serif;
+    /* font-family: "Jersey 10", sans-serif; */
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: whitesmoke;
@@ -116,4 +117,39 @@ p {
     top: 150px;
     left: 510px;
     border-radius: 3px;
+}
+
+#region-btns {
+    width: 400px;
+    position: absolute;
+    top: 375px;
+    left: 510px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 2px 2px 2px black;
+}
+
+#region-btns button {
+    font-family: inherit;
+    font-weight: 500;
+    background-color: #34e0fb;
+    border: none;
+    padding: 8px 4px;
+}
+
+#region-btns button:hover {
+    background-color: #39cee6;
+}
+
+#region-btns .selected-region {
+    background-color: yellow;
+}
+
+#region-btns .selected-region:hover {
+    background-color: yellow;
 }
